@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @inventory.item_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @inventory.name %>
+</p>
+
+<p>
+  <strong>Item status:</strong>
+  <%= @inventory.item_status %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @inventory.quantity %>
+</p>
+
+<p>
+  <strong>Markup:</strong>
+  <%= @inventory.markup %>
+</p>
+
+<p>
+  <strong>Amount sold:</strong>
+  <%= @inventory.amount_sold %>
+</p>
+
+<p>
+  <strong>Current order amount:</strong>
+  <%= @inventory.current_order_amount %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @inventory.category %>
+</p>
+
+<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'Back', inventories_path %>

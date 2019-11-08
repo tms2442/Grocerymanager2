@@ -1,0 +1,57 @@
+<%= form_with(model: inventory, local: true) do |form| %>
+  <% if inventory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(inventory.errors.count, "error") %> prohibited this inventory from being saved:</h2>
+
+      <ul>
+      <% inventory.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :item_id %>
+    <%= form.number_field :item_id, id: :inventory_item_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_area :name, id: :inventory_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item_status %>
+    <%= form.text_area :item_status, id: :inventory_item_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity, id: :inventory_quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :markup %>
+    <%= form.text_field :markup, id: :inventory_markup %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount_sold %>
+    <%= form.number_field :amount_sold, id: :inventory_amount_sold %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_order_amount %>
+    <%= form.number_field :current_order_amount, id: :inventory_current_order_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_area :category, id: :inventory_category %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
