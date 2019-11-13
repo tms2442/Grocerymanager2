@@ -1,10 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Inventories</h1>
+</br>
+<h1>Welcome,</h1>
+<% if logged_in? %>
+    <h1><%= current_user.username %></h1>
+<%end%>
+<%= button_to "Logout", '/login', method: :get%>
 
-<marquee>Welcome, user!</marquee>
-
-<marquee scrollamount="4" direction="up">sign in</marquee> 
 
 
 <marquee direction="down" height="50" behavior="alternate" style="border:solid">
