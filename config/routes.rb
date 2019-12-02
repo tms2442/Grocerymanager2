@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'authorized', to: 'inventories#admin'
   get 'mainpage', to: 'inventories#index'
   get 'showsadmin', to: 'inventories#showadmin'
+  get 'usermanage', to: 'sessions#page_requires_login'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
