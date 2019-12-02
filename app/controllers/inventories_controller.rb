@@ -7,6 +7,10 @@ class InventoriesController < ApplicationController
     @inventories = Inventory.all
   end
 
+  def admin
+    @inventories = Inventory.all
+  end
+
   # GET /inventories/1
   # GET /inventories/1.json
   def show
